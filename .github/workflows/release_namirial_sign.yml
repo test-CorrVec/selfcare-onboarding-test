@@ -133,4 +133,4 @@ jobs:
         run: |
           terraform apply -lock-timeout=3000s -auto-approve -input=false tfplan-${{ inputs.env }}-${{ github.sha }}
         env:
-          TF_VAR_image_tag: ${{ needs.tf_plan.outputs.image_tag }}
+          TF_VAR_image_tag: ${{ needs.tf_plan.outputs.image_tag }} # test
